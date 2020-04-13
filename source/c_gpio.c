@@ -339,9 +339,7 @@ void output_gpio(int gpio, int value)
 
 #ifdef BPI
     if ( bpi_found == 1)  {
-	printf("gpio = %d, value = %d\n", gpio, value);
 	gpio = *(pinTobcm_BP + gpio);
-	printf("gpio = %d, value = %d\n", gpio, value);
 	if(bpi_found_mtk ==  1){
 		mtk_set_gpio_out(gpio, value);
 	}else{
