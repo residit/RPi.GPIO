@@ -325,11 +325,8 @@ int mtk_set_gpio_mode(unsigned int pin, unsigned int mode){
     uint32_t tmp;
     uint32_t position = 0;
     position = gpio_mmap_reg + MTK_GPIO_MODE + (pin / 5) * 16;
-
     tmp = *(volatile uint32_t*)(position);
-
     tmp &= ~(1u << ((pin % 5) * 3));
-
     *(volatile uint32_t*)(position) = tmp;
     return ;
 

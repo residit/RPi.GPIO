@@ -343,7 +343,7 @@ void output_gpio(int gpio, int value)
 	if(bpi_found_mtk ==  1){
 		mtk_set_gpio_out(gpio, value);
 	}else{
-	       sunxi_output_gpio(gpio, value);
+	    sunxi_output_gpio(gpio, value);
 	}
        return;
     }
